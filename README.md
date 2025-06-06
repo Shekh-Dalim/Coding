@@ -16,7 +16,7 @@ output: 2
 
 */
 
-
+```
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -56,11 +56,10 @@ int main()
 
     return 0;
 }
-
+```
 
 /************************* Count the number of unique element ***********************/
-
-
+```
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -98,7 +97,7 @@ int main()
 
     return 0;
 }
-
+```
 
 /*
 Q2.Write a program to calculate and return the sum of distances between the adjacent number in an array of positive integers.
@@ -118,7 +117,7 @@ eparation
 Output 12
 
 */
-
+```
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -162,7 +161,7 @@ int main()
     cout << "the adjacent sum is: " << ans;
     return 0;
 }
-
+```
 
 /*
 Q2.Write a program to calculate and return the sum of distances between the adjacent number in an array of positive integers.
@@ -182,7 +181,7 @@ eparation
 Output 12
 
 */
-
+```
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -226,9 +225,9 @@ int main()
     cout << "the adjacent sum is: " << ans;
     return 0;
 }
-
+```
 /*  7. Write a program to count the number of vowels in a string. */
-
+```
 // #include <bits/stdc++.h>
 // using namespace std;
 
@@ -255,9 +254,9 @@ int main()
 //     cout << "the numver of voul is: " << ans;
 //     return 0;
 // }
-
+```
 // 8. Write a Program to check whether the string is palindrome or not
-
+```
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -290,7 +289,7 @@ int main()
     }
     return 0;
 }
-
+```
 
 /*
 A Cloth merchant has some pieces of cloth of different lengths. He has an order of curtains of length of 12 feet.
@@ -322,7 +321,7 @@ The first parameter 5 is the size of the array. Next is an array of measurements
 total = 9
 
 */
-
+```
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -346,9 +345,9 @@ int main()
     cout<<"the Total curtains is: "<<ans;
     return 0;
 }
-
+```
 // 6. Write a program to find the maximum element in an array.
-
+```
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -370,9 +369,6 @@ int maxNumEle(int arr[],int n){
         }
     }
     return maxEle;
-
-    
-    
 }
 int main()
 {
@@ -382,7 +378,7 @@ int main()
     cout<<ans;
     return 0;
 }
-
+```
 
 /*
 9. Write a program to count occurrences of a specific character in a string.
@@ -396,7 +392,7 @@ Count how many times that character appears in the string.
 Print the count.
 
 */
-
+```
 // #include <bits/stdc++.h>
 // using namespace std;
 
@@ -432,9 +428,9 @@ Print the count.
 //     cout<<"Count the occurance of a specific character" << ch<<" in string is: "<<ans;
 //     return 0;
 // }
-
+```
 /*   Write a program to remove duplicates from an array. */
-
+```
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -457,10 +453,10 @@ int main() {
 
     return 0;
 }
-
+```
 
 // Count frequency of each element
-
+```
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -486,4 +482,4 @@ int main() {
 
     return 0;
 }
-
+```
