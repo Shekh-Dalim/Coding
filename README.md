@@ -483,3 +483,207 @@ int main() {
     return 0;
 }
 ```
+
+/*************** Q: Reverse a string ****************/
+```
+#include <bits/stdc++.h>
+using namespace std;
+
+void stringReverse(string &st, int n)
+{
+    int s = 0;
+    int e = n - 1;
+    while (s < e)
+    {
+        swap(st[s], st[e]);
+        s++;
+        e--;
+    }
+}
+
+int main()
+{
+    string str = "dalim";
+    int size = str.length();
+    cout << "String before reverse: " << str << endl;
+    stringReverse(str, size);
+    cout << "String After reverse: " << str << endl;
+
+    return 0;
+}
+```
+
+/************ Q: Find the Maximum Element in an array  **********/
+```
+#include <bits/stdc++.h>
+using namespace std;
+
+int maxEle(int arr[], int size)
+{
+
+    int maxEle = INT_MIN;
+    for (int i = 0; i < size; i++)
+    {
+        if (arr[i] > maxEle)
+        {
+            maxEle = arr[i];
+        }
+    }
+    return maxEle;
+}
+
+int main()
+{
+    int arr[6] = {1, 2, 3, 9, 3, 4};
+    int size = sizeof(arr) / sizeof(arr[0]);
+
+    int maxElement = maxEle(arr, size);
+    cout << "Maximum Element: " << maxElement;
+    return 0;
+}
+```
+
+/************ Q: Find the Most Frequent Element in an array  **********/
+```
+#include <bits/stdc++.h>
+using namespace std;
+
+int mostFrequent(int arr[], int size)
+{
+    unordered_map<int, int> freq;
+
+    // Count frequency of each element
+    for (int i = 0; i < size; i++)
+    {
+        freq[arr[i]]++;
+    }
+
+    int maxFreq = 0;
+    int mostFreqElement = arr[0];
+
+    // Find the element with the highest frequency
+    for (auto &entry : freq)
+    {
+        if (entry.second > maxFreq || 
+           (entry.second == maxFreq && entry.first < mostFreqElement)) // tie-breaker: smallest value
+        {
+            maxFreq = entry.second;
+            mostFreqElement = entry.first;
+        }
+    }
+
+    return mostFreqElement;
+}
+
+int main()
+{
+    int arr[6] = {1, 2, 3, 9, 3, 4};
+    int size = sizeof(arr) / sizeof(arr[0]);
+
+    int result = mostFrequent(arr, size);
+    cout << "Most Frequent Element: " << result;
+    return 0;
+}
+
+```
+
+/**************** Q: Check if a string is a palindrome or not ************/
+```
+#include <bits/stdc++.h>
+using namespace std;
+
+bool isPaindrom(string str, int n)
+{
+    int s = 0;
+    int e = n -1;
+    while(s < e){
+        if(str[s++] != str[e--] ){
+            return 0;
+        }
+    }
+    return 1;
+}
+
+int main()
+{
+
+    string str = "daaed";
+    int size = str.length();
+
+    if (isPaindrom(str, size))
+    {
+        cout << "String is Palindrom";
+    }
+    else
+    {
+        cout << "String is not Palindrom";
+    }
+}
+```
+
+/************  Q: Find the Missing Number in an Array *****************/
+```
+#include <bits/stdc++.h>
+using namespace std;
+
+int missingEle(int arr[], int n)
+{
+    int total = (n + 1) * (n + 2) / 2; // sum formula uses n * (n + 1) / 2
+    for (int i = 0; i < n; i++)
+    {
+        total -= arr[i];
+    }
+    return total;
+}
+int main()
+{
+    int arr[] = {1, 2, 4, 5, 6};
+    int size = sizeof(arr) / sizeof(arr[0]);
+    int ans = missingEle(arr, size);
+    cout << "The missing element is: " << ans;
+    return 0;
+}
+```
+
+/***********  Q: Find the intersection of Two Array  ***********/
+```
+#include <bits/stdc++.h>
+using namespace std;
+
+vector<int> intersectionEle(int arr1[], int arr2[], int s1, int s2)
+{
+
+    vector<int> ans;
+
+    for (int i = 0; i < s1; i++)
+    {
+        for (int j = 0; j < s2; j++)
+        {
+            if (arr2[i] == arr1[j])
+            {
+                ans.push_back(arr1[i]);
+                break;
+            }
+        }
+    }
+
+    return ans;
+}
+
+int main()
+{
+    int arr1[] = {1, 2, 3, 4};
+    int arr2[] = {1, 3, 4};
+
+    int size1 = sizeof(arr1) / sizeof(arr1[0]);
+    int size2 = sizeof(arr2) / sizeof(arr2[0]);
+
+    vector<int> ans = intersectionEle(arr1, arr2, size1, size2);
+
+    for (int ele : ans)
+    {
+        cout << ele << " ";
+    }
+    return 0;
+}
+```
